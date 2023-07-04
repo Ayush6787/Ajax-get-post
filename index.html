@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Fetch Text File</title>
+</head>
+<body>
+    <div id="result">Hello World</div>
+    <button onclick="fetchData()">Fetch Data</button>
+</body>
+<script>
+    function fetchData(){
+        const xhttp = new XMLHttpRequest()
+  
+xhttp.onload = function(){
+    document.getElementById('result').innerHTML = this.responseText
+}
+xhttp.open('GET','hi.txt',true)
+xhttp.send()
+}
+</script>
+</html>
